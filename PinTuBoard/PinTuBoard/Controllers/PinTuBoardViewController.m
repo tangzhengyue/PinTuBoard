@@ -7,8 +7,16 @@
 //  拼图板游戏主界面实现文件
 
 #import "PinTuBoardViewController.h"
+#import "PinTuBoardView.h"
+
+#define MARGIN 10                           // 控件间距
+#define BOARD_TO_VIEW_HEIGHT_RATE 0.75      // 拼图视图占手机屏幕的高度比
 
 @interface PinTuBoardViewController ()
+{
+    PinTuBoardView *_contentView;
+    UIImageView *_previewImage;
+}
 
 @end
 
@@ -16,22 +24,40 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.view.backgroundColor = [UIColor orangeColor];
+    
+    CGSize sizeParentView = self.view.bounds.size;
+    UIImage *img = [UIImage imageNamed:@"defaultPic.png"];
+    
+    if (!_contentView) {
+        _contentView = [[PinTuBoardView alloc] initWithRows:4 Columns:3];
+        
+        _contentView.frame = CGRectMake(MARGIN, sizeParentView.height * (1 - BOARD_TO_VIEW_HEIGHT_RATE), sizeParentView.width - 2 * MARGIN, sizeParentView.height * BOARD_TO_VIEW_HEIGHT_RATE - MARGIN);
+        
+        [self.view addSubview:_contentView];
+        
+        [_contentView setDisplayViewWithImage:img];
+    }
+    
+    // 调整预览图片的位置
+    if (!_previewImage) {
+        _previewImage = [[UIImageView alloc] init];
+        _previewImage.image = img;
+        
+        CGRect preImageFrame = CGRectZero;
+        preImageFrame.origin.x = MARGIN;
+        preImageFrame.origin.y = MARGIN;
+        preImageFrame.size.height = sizeParentView.height * (1 - BOARD_TO_VIEW_HEIGHT_RATE) - 2 * MARGIN;
+        preImageFrame.size.width = _contentView.bounds.size.width * preImageFrame.size.height / _contentView.bounds.size.height;
+        _previewImage.frame = preImageFrame;
+        
+        [self.view addSubview:_previewImage];
+    }
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (BOOL)prefersStatusBarHidden {
+    return YES;
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

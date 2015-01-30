@@ -18,7 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] init];
-    self.window.bounds = [UIScreen mainScreen].bounds;
+    CGSize windowSize = [UIScreen mainScreen].bounds.size;
+    self.window.frame = CGRectMake(0, 0, windowSize.width, windowSize.height);
     
     PinTuBoardViewController *pinTuController = [[PinTuBoardViewController alloc] init];
     self.window.rootViewController = pinTuController;
