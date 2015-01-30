@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF15E1541A7BC81E00CC633F /* PinTuViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF15E1531A7BC81E00CC633F /* PinTuViewCell.m */; };
+		FF15E1571A7BC83C00CC633F /* PinTuBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF15E1561A7BC83C00CC633F /* PinTuBoardView.m */; };
 		FF21C57E1A7BBC80002BA0FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FF21C57D1A7BBC80002BA0FA /* main.m */; };
 		FF21C5811A7BBC80002BA0FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FF21C5801A7BBC80002BA0FA /* AppDelegate.m */; };
 		FF21C5891A7BBC80002BA0FA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF21C5881A7BBC80002BA0FA /* Images.xcassets */; };
@@ -26,6 +28,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FF15E1521A7BC81E00CC633F /* PinTuViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PinTuViewCell.h; path = Views/PinTuViewCell.h; sourceTree = "<group>"; };
+		FF15E1531A7BC81E00CC633F /* PinTuViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PinTuViewCell.m; path = Views/PinTuViewCell.m; sourceTree = "<group>"; };
+		FF15E1551A7BC83C00CC633F /* PinTuBoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinTuBoardView.h; sourceTree = "<group>"; };
+		FF15E1561A7BC83C00CC633F /* PinTuBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinTuBoardView.m; sourceTree = "<group>"; };
 		FF21C5781A7BBC80002BA0FA /* PinTuBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PinTuBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF21C57C1A7BBC80002BA0FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF21C57D1A7BBC80002BA0FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -58,6 +64,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FF15E1511A7BC7DE00CC633F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FF15E1521A7BC81E00CC633F /* PinTuViewCell.h */,
+				FF15E1531A7BC81E00CC633F /* PinTuViewCell.m */,
+				FF15E1551A7BC83C00CC633F /* PinTuBoardView.h */,
+				FF15E1561A7BC83C00CC633F /* PinTuBoardView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		FF21C56F1A7BBC80002BA0FA = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +96,7 @@
 		FF21C57A1A7BBC80002BA0FA /* PinTuBoard */ = {
 			isa = PBXGroup;
 			children = (
+				FF15E1511A7BC7DE00CC633F /* Views */,
 				FF21C5A11A7BC277002BA0FA /* Controllers */,
 				FF21C57F1A7BBC80002BA0FA /* AppDelegate.h */,
 				FF21C5801A7BBC80002BA0FA /* AppDelegate.m */,
@@ -223,7 +241,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF15E1571A7BC83C00CC633F /* PinTuBoardView.m in Sources */,
 				FF21C5811A7BBC80002BA0FA /* AppDelegate.m in Sources */,
+				FF15E1541A7BC81E00CC633F /* PinTuViewCell.m in Sources */,
 				FF21C5A41A7BC2D9002BA0FA /* PinTuBoardViewController.m in Sources */,
 				FF21C57E1A7BBC80002BA0FA /* main.m in Sources */,
 			);
