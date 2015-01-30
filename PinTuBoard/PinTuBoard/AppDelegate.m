@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "PinTuBoardViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] init];
+    self.window.bounds = [UIScreen mainScreen].bounds;
+    
+    PinTuBoardViewController *pinTuController = [[PinTuBoardViewController alloc] init];
+    self.window.rootViewController = pinTuController;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

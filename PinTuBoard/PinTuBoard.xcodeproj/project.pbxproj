@@ -9,11 +9,10 @@
 /* Begin PBXBuildFile section */
 		FF21C57E1A7BBC80002BA0FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FF21C57D1A7BBC80002BA0FA /* main.m */; };
 		FF21C5811A7BBC80002BA0FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FF21C5801A7BBC80002BA0FA /* AppDelegate.m */; };
-		FF21C5841A7BBC80002BA0FA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF21C5831A7BBC80002BA0FA /* ViewController.m */; };
-		FF21C5871A7BBC80002BA0FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF21C5851A7BBC80002BA0FA /* Main.storyboard */; };
 		FF21C5891A7BBC80002BA0FA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF21C5881A7BBC80002BA0FA /* Images.xcassets */; };
 		FF21C58C1A7BBC80002BA0FA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF21C58A1A7BBC80002BA0FA /* LaunchScreen.xib */; };
 		FF21C5981A7BBC80002BA0FA /* PinTuBoardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FF21C5971A7BBC80002BA0FA /* PinTuBoardTests.m */; };
+		FF21C5A41A7BC2D9002BA0FA /* PinTuBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF21C5A31A7BC2D9002BA0FA /* PinTuBoardViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +31,13 @@
 		FF21C57D1A7BBC80002BA0FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FF21C57F1A7BBC80002BA0FA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FF21C5801A7BBC80002BA0FA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FF21C5821A7BBC80002BA0FA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FF21C5831A7BBC80002BA0FA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		FF21C5861A7BBC80002BA0FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FF21C5881A7BBC80002BA0FA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FF21C58B1A7BBC80002BA0FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		FF21C5911A7BBC80002BA0FA /* PinTuBoardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PinTuBoardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF21C5961A7BBC80002BA0FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF21C5971A7BBC80002BA0FA /* PinTuBoardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PinTuBoardTests.m; sourceTree = "<group>"; };
+		FF21C5A21A7BC2D9002BA0FA /* PinTuBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PinTuBoardViewController.h; path = Controllers/PinTuBoardViewController.h; sourceTree = "<group>"; };
+		FF21C5A31A7BC2D9002BA0FA /* PinTuBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PinTuBoardViewController.m; path = Controllers/PinTuBoardViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,11 +79,9 @@
 		FF21C57A1A7BBC80002BA0FA /* PinTuBoard */ = {
 			isa = PBXGroup;
 			children = (
+				FF21C5A11A7BC277002BA0FA /* Controllers */,
 				FF21C57F1A7BBC80002BA0FA /* AppDelegate.h */,
 				FF21C5801A7BBC80002BA0FA /* AppDelegate.m */,
-				FF21C5821A7BBC80002BA0FA /* ViewController.h */,
-				FF21C5831A7BBC80002BA0FA /* ViewController.m */,
-				FF21C5851A7BBC80002BA0FA /* Main.storyboard */,
 				FF21C5881A7BBC80002BA0FA /* Images.xcassets */,
 				FF21C58A1A7BBC80002BA0FA /* LaunchScreen.xib */,
 				FF21C57B1A7BBC80002BA0FA /* Supporting Files */,
@@ -117,6 +113,15 @@
 				FF21C5961A7BBC80002BA0FA /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FF21C5A11A7BC277002BA0FA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FF21C5A21A7BC2D9002BA0FA /* PinTuBoardViewController.h */,
+				FF21C5A31A7BC2D9002BA0FA /* PinTuBoardViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,7 +204,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF21C5871A7BBC80002BA0FA /* Main.storyboard in Resources */,
 				FF21C58C1A7BBC80002BA0FA /* LaunchScreen.xib in Resources */,
 				FF21C5891A7BBC80002BA0FA /* Images.xcassets in Resources */,
 			);
@@ -219,8 +223,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF21C5841A7BBC80002BA0FA /* ViewController.m in Sources */,
 				FF21C5811A7BBC80002BA0FA /* AppDelegate.m in Sources */,
+				FF21C5A41A7BC2D9002BA0FA /* PinTuBoardViewController.m in Sources */,
 				FF21C57E1A7BBC80002BA0FA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,14 +248,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FF21C5851A7BBC80002BA0FA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FF21C5861A7BBC80002BA0FA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FF21C58A1A7BBC80002BA0FA /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -414,6 +410,7 @@
 				FF21C59D1A7BBC80002BA0FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FF21C59E1A7BBC80002BA0FA /* Build configuration list for PBXNativeTarget "PinTuBoardTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +419,7 @@
 				FF21C5A01A7BBC80002BA0FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
